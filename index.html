@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<body id="particles-js">
+    <div class="textBox"></div>
+    <div class="container">
+        <div class="gameOver">
+            <div class="go">GAME OVER</div><br>
+            <button class="restart" onclick='restart()'>Restart</button>
+        </div>
+    </div>
+
+    <audio class="gOver" src="./audio/gameOver.mp3"></audio>
+    <audio class="open" src="./audio/open.mp3"></audio>
+    <audio class="flagAudio" src="./audio/flag.mp3"></audio>
+
+    <div class="footer">Made with  <img class="heart" src="./images/heart.jpeg" alt="love">  by Rahul</div>
+    
+    <script src="./game.js"></script>
+    <script src="./particle.js"></script>
+</body>
+</html>
