@@ -52,7 +52,7 @@ var createMaze=function(n) {
             return true;
         }
         catch (e) {
-            return false;
+            //return false;
         }
     }
     
@@ -89,7 +89,7 @@ var createMaze=function(n) {
                 if (check(i,j+1)) count++;
                 if (check(i+1,j-1)) count++;
                 if (check(i+1,j)) count++;
-                if (check(i+1,j+11)) count++;
+                if (check(i+1,j+1)) count++;
                 if (count!=0) {
                     blocks[i][j].textContent=count;
                 }
