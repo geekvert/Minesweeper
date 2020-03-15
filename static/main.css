@@ -48,11 +48,11 @@ body {
     font-size: larger;
 }
 .bomb {
-    background-image: url('/images/bomb.png');
+    background-image: url('../images/bomb.png');
     background-size: contain;
 }
 .flag {
-    background-image: url('/images/flag.jpg');
+    background-image: url('../images/flag.jpg');
     background-size: contain;
 }
 .textBox {
