@@ -100,3 +100,11 @@ button:hover {
     height: 20px;
     padding: 6px;
 }
+.rightern {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 4px 20px;
+    color: white;
+    background-color: #cccccc;
+}

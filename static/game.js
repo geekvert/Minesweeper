@@ -13,6 +13,15 @@ document.querySelector('body').onload=function() {
     typeWriter();
 }
 
+var i=0;
+var timeout;
+var timer=document.querySelector('.timer');
+var counting=function() {
+    i++;
+    timer.innerHTML=i+'<span style="font-size: 60%;"> seconds</span>';
+    timeout=setTimeout(counting, 1000);
+}
+
 var container=document.querySelector('.container');
 
 var toArray=function(obj) {
@@ -113,7 +122,9 @@ var coverBlocks=function(n) {
                 var temp=document.createElement('div');
                 temp.classList.add('blockLayer')
                 blocks[i][j].appendChild(temp);
-    
+                
+                var checkCount=0;
+
                 temp.addEventListener('contextmenu', function(e) {
                     e.preventDefault();
                     if (!(toArray(e.target.classList).includes('flag'))) {
@@ -123,18 +134,28 @@ var coverBlocks=function(n) {
                         e.target.classList.remove('flag');
                     }
                     //document.querySelector('.open').play();
+                    
+                    if (checkCount==0) {
+                        counting();
+                        checkCount++;
+                    }
                 })
                 
                 temp.addEventListener('click', function(e) {
                     if (toArray(e.target.parentNode.classList).includes('bomb') && !toArray(e.target.classList).includes('flag')) {
                         e.target.style.display='none';
-                        setTimeout(gameOver, 100);
+                        setTimeout(gameOver, 200);
                         console.log('GAME_OVER');
                     }
                     else if (!toArray(e.target.classList).includes('flag')) {
                         e.target.classList.remove('blockLayer');
                     }
                     //document.querySelector('.flagAudio').play();
+                    
+                    if (checkCount==0) {
+                        counting();
+                        checkCount++;
+                    }
                 })
     
             }
@@ -149,9 +170,9 @@ var gameOver=function() {
     document.querySelector('.gameOver').style.display='flex';
     document.querySelector('.gOver').play();
     document.querySelector('.rest').style.display='none';
+    clearTimeout(timeout);
 }
 var restart=function() {
     location.reload();
 }
 createMaze(8);
-
