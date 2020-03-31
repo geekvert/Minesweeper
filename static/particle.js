@@ -97,5 +97,5 @@ const particlesJSON = {
         },
         "retina_detect": true
     }
-    //particlesJS("particles-js", particlesJSON);
+    particlesJS("particles-js", particlesJSON);
     document.bgColor='#A9A9A9';
