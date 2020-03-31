@@ -1,5 +1,5 @@
 * {
-    font-family: 'Sigmar one', cursive;
+    font-family: 'Sigmar one', Arial;
 }
 body {
     margin: 0;
@@ -22,9 +22,7 @@ body {
    width: 28em;
    height: 28em;
    border: 2px solid black;
-   border-radius: 0px;
-   margin-top: 0.8em;
-
+   margin-top: 2vh;
 }
 .block {
     display: flex;
@@ -59,7 +57,7 @@ body {
     display: flex;
     color: rgb(250, 250, 250);
     font-size: 250%;
-    margin-top: 0.2em;
+    margin-top: 5vh;
     letter-spacing: 2px;
     text-align: center;
     z-index: 2;
@@ -81,6 +79,7 @@ button {
     border-radius: 8px;
     color: #535353;
     margin: 8px;
+    padding: 2px 8px;
 }
 button:hover {
     cursor: pointer;
@@ -93,6 +92,7 @@ button:hover {
     width: 100%;
     font-size: 120%;
     justify-content: center;
+    align-items: center;
     color: #535353  ;
 }
 .heart {
@@ -107,4 +107,29 @@ button:hover {
     padding: 4px 20px;
     color: white;
     background-color: #cccccc;
+}
+@media only screen and (max-width: 600px) {
+    .footer {
+        display: none;
+    }
+    .container {
+        width: 20em;
+        height: 20em;
+        margin-top: 4vh;
+    }
+    .block {
+        width: 2.1428em;
+        height: 2.1428em;
+        margin: 2.7px;
+    }
+    .blockLayer {
+        width: 2.1428em;
+        height: 2.1428em;
+    }
+    .rightern {
+        padding: 2px 8px;
+    }
+    .textBox {
+        letter-spacing: normal;
+    }
 }

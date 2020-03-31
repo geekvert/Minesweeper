@@ -1,10 +1,10 @@
 document.querySelector('body').onload=function() {
-    var i = 0;
-    var txt = 'Minesweeper';
-    var speed = 90;
+    var i=0;
+    var txt='Minesweeper';
+    var speed=90;
 
     function typeWriter() {
-        if (i < txt.length) {
+        if (i<txt.length) {
             document.querySelector('.textBox').innerHTML+=txt.charAt(i);
             i++;
             setTimeout(typeWriter, speed);
