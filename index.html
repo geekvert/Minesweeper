@@ -15,29 +15,50 @@
     <meta property="og:title" content="Minesweeper made by Rahul">
     <meta property="og:image" content="https://geekvert.github.io/Minesweeper/images/icon.png">
     <title>Minesweeper</title>
+    <link rel="shortcut icon" type="image/png" href="./images/minesweeper_icon.png"/>
     <link rel="stylesheet" href="./static/main.css">
+    <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Sigmar+One&display=swap" rel="stylesheet">
+    <!-- Particles live background -->
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
 <body id="particles-js">
     <div class="textBox"></div>
+
     <div class="rightern">
-        <div class="txt">Timer</div>
-        <div class="timer">0<span style="font-size: 60%;"> seconds</span></div>
-    </div>
-    <div class="container">
-        <div class="gameOver">
-            <div class="go">GAME OVER</div><br>
-            <button class="restart" onclick='restart()'>Restart</button>
+        <div class="txt">
+            Timer
+        </div>
+        <div class="timer">
+            0<span style="font-size: 60%;"> seconds</span>
         </div>
     </div>
-    <button class="rest" onclick="restart()">Restart</button>
+
+    <div class="container">
+        <div class="gameOver">
+            <div class="go">
+                GAME OVER
+            </div>
+            <br>
+            <button class="restart" onclick=restart()>
+                Restart
+            </button>
+        </div>
+    </div>
+
+    <button class="rest" onclick=restart()>
+        Restart
+    </button>
 
     <audio class="gOver" src="./audio/gameOver.mp3"></audio>
     <audio class="open" src="./audio/open.mp3"></audio>
     <audio class="flagAudio" src="./audio/flag.mp3"></audio>
 
-    <div class="footer">Made with  <img class="heart" src="./images/heart.jpeg" alt="love">  by Rahul</div>
+    <div class="footer">
+        Made with  <img class="heart" src="./images/heart.jpeg" alt="love">  by Rahul
+    </div>
     
     <script src="./static/test.min.js"></script>
     <script src="./static/particle.js"></script>

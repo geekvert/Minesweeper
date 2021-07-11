@@ -50,7 +50,7 @@ body {
     background-size: contain;
 }
 .flag {
-    background-image: url('../images/flag.jpg');
+    background-image: url('../images/flag.png');
     background-size: contain;
 }
 .textBox {
@@ -74,12 +74,15 @@ body {
     color: #535353;
     z-index: 2;
 }
+.restart {
+    font-size: 0.5em;
+}
 button {
     border: none;
     border-radius: 8px;
     color: #535353;
     margin: 8px;
-    padding: 2px 8px;
+    padding: 4px 10px;
 }
 button:hover {
     cursor: pointer;
@@ -107,11 +110,9 @@ button:hover {
     padding: 4px 20px;
     color: white;
     background-color: #cccccc;
+    border-radius: 0 0 0 0.5em;
 }
 @media only screen and (max-width: 600px) {
-    .footer {
-        display: none;
-    }
     .container {
         width: 20em;
         height: 20em;
@@ -130,6 +131,7 @@ button:hover {
         padding: 2px 8px;
     }
     .textBox {
+        margin-top: 2em;
         letter-spacing: normal;
     }
 }
